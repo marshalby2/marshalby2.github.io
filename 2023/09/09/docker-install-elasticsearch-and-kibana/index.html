@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://b3logfile.com/file/2023/09/siyuan/1524822749398/assets/image-20230909154206-v5z093x.png">
 <meta property="og:image" content="https://b3logfile.com/file/2023/09/siyuan/1524822749398/assets/image-20230909154417-p97fm7g.png">
 <meta property="article:published_time" content="2023-09-09T08:25:24.000Z">
-<meta property="article:modified_time" content="2023-09-09T08:35:33.232Z">
+<meta property="article:modified_time" content="2023-09-09T08:41:37.058Z">
 <meta property="article:author" content="marshalby2">
 <meta property="article:tag" content="ElasticSearch">
 <meta property="article:tag" content="Kibana">
@@ -358,7 +358,7 @@
 
 <h3 id="3-2-配置-Kibana"><a href="#3-2-配置-Kibana" class="headerlink" title="3.2 配置 Kibana"></a>3.2 配置 Kibana</h3><p>第一次使用 Kibana 的时候，会提示需要 enrollment token</p>
 <p><img src="https://b3logfile.com/file/2023/09/siyuan/1524822749398/assets/image-20230909153242-l0sqjb5.png" srcset="/img/loading.gif" lazyload alt="image" title="设置 enrollment token"></p>
-<p>在启动 ElasticSearch 的时候，会自动生产一个 enrollment token，可以通过  <code>docker logs -f es</code> 来查看，也可以通过下面的指令，生成一个新的 enrollment token</p>
+<p>在启动 ElasticSearch 的时候，会自动生成一个 enrollment token，可以通过  <code>docker logs -f es</code> 来查看，也可以通过下面的指令，生成一个新的 enrollment token</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker exec -it es /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana<br></code></pre></td></tr></table></figure>
 
 <p>将 enrollment token 复制到刚才的提示框里，然后会提示需要输入验证码，可以使用 <code>docker logs -f kib</code>来查看验证码。</p>
